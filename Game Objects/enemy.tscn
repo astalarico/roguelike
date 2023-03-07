@@ -1,12 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0csq5bumxwxm"]
+[gd_scene load_steps=3 format=3 uid="uid://c0csq5bumxwxm"]
+
+[ext_resource type="Texture2D" uid="uid://blr2i3h2ta1ej" path="res://Sprites/world_black.png" id="1_iaxhv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_641ha"]
+size = Vector2(16, 16)
 
 [node name="Enemy" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_iaxhv")
+centered = false
+hframes = 49
+vframes = 22
+frame = 324
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_641ha")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
