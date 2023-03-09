@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0csq5bumxwxm"]
+[gd_scene load_steps=4 format=3 uid="uid://c0csq5bumxwxm"]
 
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_f2e25"]
 [ext_resource type="Texture2D" uid="uid://blr2i3h2ta1ej" path="res://Sprites/world_black.png" id="1_iaxhv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_641ha"]
 size = Vector2(16, 16)
 
-[node name="Enemy" type="Node2D"]
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_f2e25")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -15,8 +17,12 @@ hframes = 49
 vframes = 22
 frame = 324
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(8, 8)
+target_position = Vector2(0, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_641ha")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
