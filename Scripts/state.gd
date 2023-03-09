@@ -23,9 +23,17 @@ func _ready():
 	world_tiles = world.get_used_cells(0)
 	world_rect = world.get_used_rect()
 	astar_grid.size = Vector2i(world_rect.size)
-	astar_grid.default_compute_heuristic = 3
-	astar_grid.cell_size = Vector2(1,1)
-	astar_grid.offset = Vector2(world_rect.position)
-	print( astar_grid.points )
+	astar_grid.default_compute_heuristic = 1
+	astar_grid.cell_size = Vector2(16,16)
 	astar_grid.diagonal_mode = 1
 	astar_grid.update()
+		
+	for tile in world_tiles:
+		var surrounding_cells = world.get_surrounding_cells( tile )
+		var tile_data = world.get_cell_tile_data( 0, tile )
+		var has_collision = tile_data.get_collision_polygons_count( 0 )
+		
+		if has_collision :
+			astar_grid.set_point_solid( tile / 16)
+
+	

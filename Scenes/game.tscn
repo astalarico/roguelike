@@ -9,10 +9,11 @@
 [node name="World" parent="." instance=ExtResource("1_wrpqe")]
 
 [node name="Enemy" parent="." instance=ExtResource("2_1grel")]
-position = Vector2(512, -32)
+position = Vector2(208, 80)
 
 [node name="Player" parent="." instance=ExtResource("4_ya1an")]
-position = Vector2(32, 32)
+position = Vector2(32, 64)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+enabled = false
 zoom = Vector2(2, 2)

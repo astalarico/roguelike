@@ -30,4 +30,6 @@ func move( direction )->void:
 		
 
 func _ready()->void:
-	emit_signal("update_world")
+	#emit_signal("update_world")
+	
+	pass
