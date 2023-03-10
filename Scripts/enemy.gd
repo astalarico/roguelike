@@ -25,12 +25,12 @@ func update():
 	
 	
 	for point in path_to_player:
-		state.astar_grid.is_point_solid( point / 16)
+		#print( state.astar_grid.is_point_solid( point / 16) )
 		state.path_line.add_point( point  )
 		
 	var next_move        = path_to_player[1] ;
 	var move_difference  = Vector2(next_move) - self.position
-	ray.target_position  = Vector2.LEFT * state.GRID_CELL_SIZE
+	ray.target_position = move_difference
 	ray.force_raycast_update()
 	
 	if( ! ray.is_colliding() ):

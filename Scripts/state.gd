@@ -18,7 +18,6 @@ var world_rect
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
 	path_line.width = 1.0
 	world_tiles = world.get_used_cells(0)
 	world_rect = world.get_used_rect()
@@ -34,6 +33,7 @@ func _ready():
 		var has_collision = tile_data.get_collision_polygons_count( 0 )
 		
 		if has_collision :
-			astar_grid.set_point_solid( tile / 16)
+			print( tile  )
+			astar_grid.set_point_solid( tile)
 
 	
