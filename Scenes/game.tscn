@@ -7,6 +7,14 @@
 [node name="Game" type="Node2D"]
 
 [node name="World" parent="." instance=ExtResource("1_wrpqe")]
+layer_0/name = "base"
+layer_1/name = "visibility"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array()
 
 [node name="Enemy" parent="." instance=ExtResource("2_1grel")]
 position = Vector2(208, 80)

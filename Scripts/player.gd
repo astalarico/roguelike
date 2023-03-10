@@ -4,6 +4,25 @@ extends CharacterBody2D
 signal update_world 
 
 func _unhandled_input(event)->void:
+	var mouse_pos = get_viewport().get_mouse_position()
+	var tile_pos = state.world.local_to_map(mouse_pos)
+	var tile_cell_at_mouse_pos = state.world.get_cell_tile_data(0, tile_pos)
+
+	if event is InputEventMouseButton:
+		print("Mouse Click/Unclick at: ", event.position)
+	elif event is InputEventMouseMotion:
+		#print("Mouse Motion at: ", event.position)
+		#print( Vector2i(event.position ) / 16)
+		state.world.clear_layer(1)
+		if( state.astar_grid.is_in_boundsv( Vector2i(event.position ) / 16) ):
+			var player_path   = state.astar_grid.get_point_path( Vector2i(self.get('position').x , self.get('position').y) / state.GRID_CELL_SIZE, Vector2i(event.position ) / 16)
+			for point in player_path:
+				var next_move        = point / 16;
+				var move_difference  = ( Vector2(next_move) - self.position / 16  ) * 16
+				print(next_move)
+				var tile_cell = state.world.get_cell_tile_data(1, next_move)
+				state.world.set_cell(1,next_move,0,Vector2(36,12))
+			
 	for direction in state.directions:
 		if event.is_action_pressed(direction):
 			move(direction)
