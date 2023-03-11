@@ -31,7 +31,7 @@ func _ready():
 		var surrounding_cells = world.get_surrounding_cells( tile )
 		var tile_data = world.get_cell_tile_data( 0, tile )
 		var has_collision = tile_data.get_collision_polygons_count( 0 )
-		print( tile )
+
 		if has_collision :
 			astar_grid.set_point_solid( tile)
 

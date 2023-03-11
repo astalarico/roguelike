@@ -28,7 +28,7 @@ func update():
 		#print( state.astar_grid.is_point_solid( point / 16) )
 		state.path_line.add_point( point  )
 		
-	var next_move        = path_to_player[1] ;
+	var next_move        = path_to_player[1];
 	var move_difference  = Vector2(next_move) - self.position
 	ray.target_position = move_difference
 	ray.force_raycast_update()
