@@ -8,7 +8,6 @@ size = Vector2(16, 16)
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_f2e25")
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_iaxhv")
@@ -26,3 +25,7 @@ position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_641ha")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="Sight" type="RayCast2D" parent="."]
+position = Vector2(8, 9)
+target_position = Vector2(0, 128)
