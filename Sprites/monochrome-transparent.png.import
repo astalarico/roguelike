@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7hhgo8o8lknh"
-path="res://.godot/imported/world.png-1dddb196c415ed6ecf2333c9f74eabfe.ctex"
+uid="uid://bpn0o6mupue5d"
+path="res://.godot/imported/monochrome-transparent.png-2e45a61e4ba9d5c37b4e1d5e1697400c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/world.png"
-dest_files=["res://.godot/imported/world.png-1dddb196c415ed6ecf2333c9f74eabfe.ctex"]
+source_file="res://Sprites/monochrome-transparent.png"
+dest_files=["res://.godot/imported/monochrome-transparent.png-2e45a61e4ba9d5c37b4e1d5e1697400c.ctex"]
 
 [params]
 

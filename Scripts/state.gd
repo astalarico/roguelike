@@ -9,7 +9,7 @@ var directions = {
 }
 
 @onready var player = get_tree().get_root().get_node('Game/Player')
-@onready var world = get_tree().get_root().get_node('Game/World')
+@onready var world = get_tree().get_root().get_node('Game/SpaceShip')
 @onready var path_line = get_tree().get_root().get_node('Game/World/Line2D')
 
 var astar_grid = AStarGrid2D.new()
@@ -34,5 +34,3 @@ func _ready():
 
 		if has_collision :
 			astar_grid.set_point_solid( tile)
-
-	
