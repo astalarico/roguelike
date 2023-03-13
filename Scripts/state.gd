@@ -10,7 +10,7 @@ var directions = {
 
 @onready var player = get_tree().get_root().get_node('Game/Player')
 @onready var world = get_tree().get_root().get_node('Game/SpaceShip')
-@onready var path_line = get_tree().get_root().get_node('Game/World/Line2D')
+@onready var path_line = get_tree().get_root().get_node('Game/SpaceShip/Line2D')
 
 var astar_grid = AStarGrid2D.new()
 var world_tiles

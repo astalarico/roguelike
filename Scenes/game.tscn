@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3qdaoiud2nju"]
+[gd_scene load_steps=4 format=3 uid="uid://bct6svvnvstkw"]
 
-[ext_resource type="PackedScene" uid="uid://dw2ccfv6gcftj" path="res://Game Objects/spaceship.tscn" id="1_wrpqe"]
+[ext_resource type="PackedScene" uid="uid://c64oac3snxiau" path="res://Game Objects/world.tscn" id="1_wrpqe"]
 [ext_resource type="PackedScene" uid="uid://c0csq5bumxwxm" path="res://Game Objects/enemy.tscn" id="2_1grel"]
 [ext_resource type="PackedScene" uid="uid://bmimoliftiucg" path="res://Game Objects/player.tscn" id="4_ya1an"]
 
@@ -9,10 +9,10 @@
 [node name="SpaceShip" parent="." instance=ExtResource("1_wrpqe")]
 
 [node name="Enemy" parent="." instance=ExtResource("2_1grel")]
-position = Vector2(64, 64)
+position = Vector2(509, 91)
 
 [node name="Player" parent="." instance=ExtResource("4_ya1an")]
-position = Vector2(384, 256)
+position = Vector2(32, 32)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(8, 8)
