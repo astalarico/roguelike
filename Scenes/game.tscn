@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bct6svvnvstkw"]
+[gd_scene load_steps=4 format=3 uid="uid://d3qdaoiud2nju"]
 
-[ext_resource type="PackedScene" uid="uid://c64oac3snxiau" path="res://Game Objects/world.tscn" id="1_wrpqe"]
+[ext_resource type="PackedScene" uid="uid://cllctov4yrjyb" path="res://Game Objects/spaceship.tscn" id="1_wrpqe"]
 [ext_resource type="PackedScene" uid="uid://c0csq5bumxwxm" path="res://Game Objects/enemy.tscn" id="2_1grel"]
 [ext_resource type="PackedScene" uid="uid://bmimoliftiucg" path="res://Game Objects/player.tscn" id="4_ya1an"]
 
@@ -8,23 +8,20 @@
 
 [node name="SpaceShip" parent="." instance=ExtResource("1_wrpqe")]
 
-[node name="Enemy" parent="." instance=ExtResource("2_1grel")]
-position = Vector2(509, 91)
-
 [node name="Player" parent="." instance=ExtResource("4_ya1an")]
-position = Vector2(32, 32)
+position = Vector2(32, 48)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(8, 8)
-zoom = Vector2(0.75, 0.75)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
 drag_left_margin = 0.0
 drag_top_margin = 0.0
 drag_right_margin = 0.0
 drag_bottom_margin = 0.0
+editor_draw_screen = false
 
-[node name="HUD" type="CanvasLayer" parent="."]
+[node name="Enemy" parent="." instance=ExtResource("2_1grel")]
+position = Vector2(509, 91)
 
-[node name="ColorRect" type="ColorRect" parent="HUD"]
-offset_right = 640.0
-offset_bottom = 16.0
-color = Color(0.976471, 0.188235, 0.329412, 1)
+[node name="Enemy2" parent="." instance=ExtResource("2_1grel")]
+position = Vector2(272, 256)

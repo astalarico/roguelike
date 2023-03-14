@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-var navigation_server = NavigationServer2D
 @onready var ray = $RayCast2D
 
 func _ready():
