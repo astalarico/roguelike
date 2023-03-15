@@ -14,10 +14,12 @@ func _unhandled_input(event)->void:
 		player_path = player_path.slice(1)
 		if player_path.size():
 			for point in player_path:
-				print( point )
+				await get_tree().process_frame
 				#emit_signal("update_world")
-				self.position = Vector2(point)
-				await get_tree().create_timer(.15).timeout	
+
+				print( point, self.position )
+				self.position = Vector2i(point)
+				await get_tree().create_timer(.15).timeout
 
 		
 	elif event is InputEventMouseMotion:

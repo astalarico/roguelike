@@ -4,21 +4,21 @@
 
 [node name="GameContainer" type="Node2D"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 644.0
+offset_bottom = 359.0
+
 [node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="HUD"]
-offset_right = 94.0
-offset_bottom = 360.0
-
 [node name="GameViewportContainer" type="SubViewportContainer" parent="."]
-offset_left = 100.0
-offset_top = 39.0
-offset_right = 641.0
-offset_bottom = 360.0
+offset_left = 174.0
+offset_top = 74.0
+offset_right = 462.0
+offset_bottom = 236.0
 
 [node name="GameViewport" type="SubViewport" parent="GameViewportContainer"]
 handle_input_locally = false
-size = Vector2i(480, 270)
+size = Vector2i(288, 162)
 render_target_update_mode = 4
 
 [node name="Game" parent="GameViewportContainer/GameViewport" instance=ExtResource("1_h4bs7")]
